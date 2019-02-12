@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Eureka-Feign-Application-Client</artifactId>
+	<artifactId>02-Eureka-Application-Server</artifactId>
 	<version>1.0</version>
 	<name>Eureka-Server</name>
 	<description>Demo project for Spring Boot</description>
@@ -67,16 +67,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-actuator</artifactId>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>Eureka-Feign-Application-Api</artifactId>
-            <version>1.0</version>
         </dependency>
 	</dependencies>
 
