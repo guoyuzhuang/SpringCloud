@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>03-Eureka-Feign-Application-Client</artifactId>
+	<artifactId>03-Eureka-Feign-Application-Client-HttpClient</artifactId>
 	<version>1.0</version>
 	<name>Eureka-Server</name>
 	<description>Demo project for Spring Boot</description>
@@ -78,10 +78,15 @@
             <artifactId>03-Eureka-Feign-Application-Api</artifactId>
             <version>1.0</version>
         </dependency>
+        
+        <!-- 以下两种httpclient包，只需要引入一种即可 -->
+        <!-- <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency> -->
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>2.3.2</version>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
         </dependency>
 	</dependencies>
 
@@ -90,9 +95,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <classifier>exe</classifier>
-                </configuration>
 			</plugin>
 			
 			<plugin>
