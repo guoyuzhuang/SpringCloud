@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>04-Eureka-Ribbon-Application-Client-Hystrix</artifactId>
+	<artifactId>05-Eureka-Turbine</artifactId>
 	<version>1.0</version>
 	<name>Eureka-Server</name>
 	<description>Demo project for Spring Boot</description>
@@ -54,33 +54,19 @@
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 		<!-- spring boot security安全认证启动器 -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency> -->
-        <!-- spring cloud Eureka Client 启动器 -->
+        </dependency>
+        
+        <!-- 多服务监控依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <!-- 优雅关闭服务依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-actuator</artifactId>
-        </dependency>
-        <!-- hystrix依赖， 处理服务灾难雪崩效应的。 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
-        <!-- hystrix的数据监控：dashborad依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-cloud-starter-turbine</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+            <artifactId>spring-cloud-netflix-turbine</artifactId>
         </dependency>
 	</dependencies>
 
