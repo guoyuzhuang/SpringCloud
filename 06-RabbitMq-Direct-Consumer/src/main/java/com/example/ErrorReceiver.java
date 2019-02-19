@@ -9,11 +9,12 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(bindings = @QueueBinding(value = @Queue(value = "${mq.config.queue.error}", autoDelete = "true"), exchange = @Exchange(value = "${mq.config.exchange}", type = ExchangeTypes.DIRECT), key = "${mq.config.queue.error.routing.key}"))
+@RabbitListener(bindings = @QueueBinding(value = @Queue(value = "${mq.config.queue.error}", autoDelete = "true"), exchange = @Exchange(value = "${mq.config.exchange}", type = ExchangeTypes.DIRECT/*, autoDelete = "true"*/), key = "${mq.config.queue.error.routing.key}"))
 public class ErrorReceiver {
 
 	@RabbitHandler
 	public void process(String msg) {
 		System.out.println("Info........receiver: " + msg);
+		throw new RuntimeException();
 	}
 }
