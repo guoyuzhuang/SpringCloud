@@ -12,10 +12,10 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @EnableCircuitBreaker
 @EnableEurekaClient
 @SpringBootApplication
-public class EurekaApplicationClientHystrixRibbon {
+public class EurekaApplicationDashBorad {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaApplicationClientHystrixRibbon.class, args);
+		SpringApplication.run(EurekaApplicationDashBorad.class, args);
 	}
 
 }
