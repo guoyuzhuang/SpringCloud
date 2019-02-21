@@ -10,7 +10,7 @@ public class ShutDownTest {
 
 	@Test
 	public void shutdown() {
-		String url = "http://luokeke:8000/shutdown";
+		String url = "http://luokeke:9000/shutdown";
 		RestTemplate rt = new RestTemplate();
 		ParameterizedTypeReference<Object> type = new ParameterizedTypeReference<Object>() {
 		};

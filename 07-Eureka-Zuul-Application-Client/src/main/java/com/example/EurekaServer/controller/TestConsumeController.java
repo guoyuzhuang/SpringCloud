@@ -1,5 +1,6 @@
 package com.example.EurekaServer.controller;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -67,5 +69,10 @@ public class TestConsumeController {
 		List<String> result = response.getBody();
 
 		return result;
+	}
+
+	@GetMapping(value = "/getMessage", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<String> getMessage() {
+		return Arrays.asList("this is client message");
 	}
 }
