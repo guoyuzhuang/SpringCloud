@@ -23,7 +23,7 @@ import com.alibaba.fastjson.JSONArray;
  * @author guoyuzhuang
  *
  */
-@Component
+//@Component
 public class ConsumerFallbackProvider implements FallbackProvider {
 
 	private Logger logger = LoggerFactory.getLogger(ConsumerFallbackProvider.class);
