@@ -10,7 +10,7 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 
-@Component
+//@Component
 public class TestErrorFilter extends ZuulFilter {
 	
 	private Logger logger = LoggerFactory.getLogger(TestErrorFilter.class);
